@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.company.ChatFeaturesTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2020-07-23T18:23:09" hostname="LVAGPLTP1956" time="0.088">
+  <properties/>
+  <testcase name="getHoroscopeFromDate()" classname="com.company.ChatFeaturesTest" time="0.036"/>
+  <testcase name="checkIfInputIsInvalid()" classname="com.company.ChatFeaturesTest" time="0.006"/>
+  <testcase name="convertStringToAstroSignEnum()" classname="com.company.ChatFeaturesTest" time="0.002"/>
+  <testcase name="returnTrueIfDateIsValid()" classname="com.company.ChatFeaturesTest" time="0.013"/>
+  <testcase name="returnFalseIfDateIsInvalid()" classname="com.company.ChatFeaturesTest" time="0.02"/>
+  <testcase name="getSignByDate()" classname="com.company.ChatFeaturesTest" time="0.001"/>
+  <system-out><![CDATA[Sorry, I understand only Y or N. Should I tell your August Horoscope?
+Error!  Unable to create date time from: [10-15-2000], please enter with format [dd-MM-yyyy], Text '10-15-2000' could not be parsed: Invalid value for MonthOfYear (valid values 1 - 12): 15
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.2'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+task createDocs {
+    def docs = file("$buildDir/docs")
+    outputs.dir docs
+    def visitTime = (new Date().format('dd-MM-yyyy HH:mm'))
+    doLast {
+        docs.mkdirs()
+        new File(docs, 'visited.txt').write(visitTime)
+    }
+}
+

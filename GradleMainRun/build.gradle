@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+task runApp(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'com.company.Main'
+}
+
+task createDocs(dependsOn: runApp) {
+    def docs = file("$buildDir/docs")
+    outputs.dir docs
+    def visitTime = (new Date().format('dd-MM-yyyy HH:mm'))
+
+    doFirst {
+        println "doFirst reports visit time: " + visitTime
+    }
+    doLast {
+        println "doLast generates a file"
+        docs.mkdirs()
+        new File(docs, 'visited.txt').write(visitTime)
+    }
+
+    createDocs.mustRunAfter runApp
+}
+

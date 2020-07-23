@@ -1,0 +1,2 @@
+com/company/ChatFeaturesTest.java
+ com.company.ChatFeaturesTest
